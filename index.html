@@ -42,7 +42,7 @@
         body {
             font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: #1a1a1a;
-            background: #ffffff;
+            background: #FBF5EE;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -62,182 +62,160 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ── Navigation ── */
-        .nav {
-            padding: 20px 0;
-            position: relative;
-            z-index: 10;
-        }
-
-        .nav .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 800;
-            font-size: 1.25rem;
-            color: #1a1a1a;
-        }
-
-        .nav-brand-icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, #E8A54B, #D4893A);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
-
-        .nav-links a {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #555;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: #1a1a1a;
-        }
-
-        .nav-cta {
-            background: #1a1a1a;
-            color: #fff !important;
-            padding: 10px 24px;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.2s ease, transform 0.2s ease;
-        }
-
-        .nav-cta:hover {
-            background: #333;
-            transform: translateY(-1px);
+            padding: 0 48px;
         }
 
         /* ── Hero Section ── */
         .hero {
-            padding: 60px 0 80px;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
+            min-height: 100vh;
+            display: flex;
             align-items: center;
-            gap: 8px;
-            background: #FFF4E0;
-            color: #B8860B;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 8px 20px;
-            border-radius: 100px;
-            margin-bottom: 32px;
+            padding: 80px 0;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            color: #1a1a1a;
-            max-width: 700px;
-            margin: 0 auto 24px;
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+            width: 100%;
         }
 
-        .hero p {
-            font-size: 1.15rem;
-            color: #666;
+        .hero-content {
+            flex: 1;
             max-width: 520px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
         }
 
-        .hero-buttons {
+        .hero-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .hero-brand-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #E8A54B, #D4893A);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin-bottom: 64px;
+            font-size: 1.2rem;
         }
 
-        .store-badge {
-            height: 52px;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-            border-radius: 12px;
+        .hero-brand-name {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #1a1a1a;
         }
 
-        .store-badge:hover {
+        .hero h1 {
+            font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #D4893A;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .hero-cta:hover {
+            background: #C17A30;
             transform: translateY(-2px);
-            opacity: 0.9;
+        }
+
+        .hero-cta svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
 
         .hero-phone {
-            position: relative;
-            max-width: 300px;
-            margin: 0 auto;
+            flex-shrink: 0;
+            width: 340px;
         }
 
-        .hero-phone .phone-frame {
-            width: 100%;
-            border-radius: 32px;
-            box-shadow:
-                0 24px 80px rgba(0, 0, 0, 0.12),
-                0 8px 32px rgba(0, 0, 0, 0.08);
-        }
-
-        /* Phone placeholder (shown when image is missing) */
-        .phone-placeholder {
+        .phone-mockup {
             width: 100%;
             aspect-ratio: 9 / 19.5;
-            background: linear-gradient(160deg, #FFF4E0, #FFE8C4);
-            border-radius: 32px;
+            background: #fff;
+            border-radius: 40px;
+            border: 6px solid #1a1a1a;
+            box-shadow:
+                0 32px 80px rgba(0, 0, 0, 0.08),
+                0 12px 40px rgba(0, 0, 0, 0.04);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            box-shadow:
-                0 24px 80px rgba(0, 0, 0, 0.12),
-                0 8px 32px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
         }
 
-        .phone-placeholder-icon {
-            font-size: 3rem;
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 28px;
+            background: #1a1a1a;
+            border-radius: 0 0 18px 18px;
         }
 
-        .phone-placeholder-text {
-            font-size: 0.8rem;
-            color: #B8860B;
-            font-weight: 600;
+        .phone-mockup-content {
             text-align: center;
-            padding: 0 20px;
+            padding: 20px;
+        }
+
+        .phone-mockup-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .phone-mockup-text {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.4;
+            max-width: 200px;
+        }
+
+        .phone-mockup-sub {
+            font-size: 0.75rem;
+            color: #aaa;
+            margin-top: 12px;
         }
 
         /* ── Features Section ── */
         .features {
-            padding: 80px 0 100px;
-            background: #FAFAFA;
+            padding: 100px 0 120px;
+            background: #FBF5EE;
         }
 
         .features-header {
-            text-align: center;
-            margin-bottom: 64px;
+            margin-bottom: 16px;
         }
 
         .features-header h2 {
@@ -247,6 +225,12 @@
             color: #1a1a1a;
         }
 
+        .features-subtitle {
+            font-size: 1.05rem;
+            color: #888;
+            margin-bottom: 56px;
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -254,81 +238,96 @@
         }
 
         .feature-card {
-            background: #FFF4E0;
+            background: #F3EDE4;
             border-radius: 24px;
-            padding: 40px 32px 32px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            transition: transform 0.3s ease;
         }
 
         .feature-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
         }
 
-        .feature-card-phone {
-            width: 180px;
-            margin: 0 auto 28px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-card-phone img {
+        .feature-card-image {
             width: 100%;
-            border-radius: 20px;
+            aspect-ratio: 4 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
         }
 
-        .feature-card-phone .phone-placeholder {
-            aspect-ratio: 9 / 16;
-            border-radius: 20px;
-            font-size: 0.7rem;
+        .feature-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .feature-card-phone .phone-placeholder-icon {
-            font-size: 2rem;
+        .feature-card-placeholder {
+            font-size: 3rem;
+        }
+
+        .feature-card-body {
+            padding: 24px 28px 28px;
         }
 
         .feature-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            font-weight: 800;
             color: #1a1a1a;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .feature-card p {
-            font-size: 0.95rem;
-            color: #666;
+            font-size: 0.92rem;
+            color: #888;
             line-height: 1.6;
         }
 
         /* ── Footer ── */
         .footer {
-            padding: 40px 0;
-            border-top: 1px solid #eee;
+            padding: 32px 0;
+            border-top: 1px solid #E5DDD3;
         }
 
         .footer .container {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 16px;
         }
 
-        .footer-copy {
-            font-size: 0.85rem;
-            color: #999;
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-brand-name {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+        }
+
+        .footer-brand-tagline {
+            font-size: 0.9rem;
+            color: #aaa;
         }
 
         .footer-links {
             display: flex;
-            gap: 24px;
+            gap: 28px;
         }
 
         .footer-links a {
-            font-size: 0.85rem;
-            color: #999;
+            font-size: 0.9rem;
+            color: #888;
             transition: color 0.2s ease;
         }
 
@@ -336,8 +335,36 @@
             color: #1a1a1a;
         }
 
+        .footer-copy {
+            font-size: 0.82rem;
+            color: #bbb;
+            text-align: center;
+        }
+
         /* ── Responsive ── */
-        @media (max-width: 900px) {
+        @media (max-width: 960px) {
+            .container {
+                padding: 0 32px;
+            }
+
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 48px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-brand {
+                justify-content: center;
+            }
+
+            .hero-phone {
+                width: 280px;
+            }
+
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -350,29 +377,21 @@
         }
 
         @media (max-width: 640px) {
-            .nav-links {
-                display: none;
+            .container {
+                padding: 0 24px;
             }
 
             .hero {
-                padding: 40px 0 60px;
+                min-height: auto;
+                padding: 60px 0;
             }
 
             .hero h1 {
                 font-size: 2.25rem;
             }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                margin-bottom: 48px;
-            }
-
-            .store-badge {
-                height: 48px;
+            .hero-phone {
+                width: 240px;
             }
 
             .features {
@@ -387,12 +406,9 @@
                 max-width: 100%;
             }
 
-            .feature-card {
-                padding: 32px 24px 24px;
-            }
-
-            .footer .container {
+            .footer-top {
                 flex-direction: column;
+                gap: 16px;
                 text-align: center;
             }
         }
@@ -400,45 +416,33 @@
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container">
-            <a href="/" class="nav-brand">
-                <span class="nav-brand-icon">🙏</span>
-                Pray Unlock
-            </a>
-            <div class="nav-links">
-                <a href="#features">How it works</a>
-                <a href="#" class="nav-cta">Download</a>
-            </div>
-        </div>
-    </nav>
-
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">
-                ✨ Available on iOS & Android
-            </div>
+            <div class="hero-content">
+                <div class="hero-brand">
+                    <span class="hero-brand-icon">🙏</span>
+                    <span class="hero-brand-name">Pray Unlock</span>
+                </div>
 
-            <h1>Block distracting apps. Unlock them with prayer.</h1>
+                <h1>Block distracting apps, unlock with prayer</h1>
 
-            <p>Choose which apps to block, pray for under a minute to unlock them, and watch your faith grow day by day.</p>
+                <p class="hero-subtitle">Build a daily prayer habit while reducing screen time. One short prayer to unlock.</p>
 
-            <div class="hero-buttons">
-                <a href="#" aria-label="Download on the App Store">
-                    <img src="images/app-store-badge.svg" alt="Download on the App Store" class="store-badge">
-                </a>
-                <a href="#" aria-label="Get it on Google Play">
-                    <img src="images/google-play-badge.svg" alt="Get it on Google Play" class="store-badge">
+                <a href="#" class="hero-cta">
+                    <svg viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                    Download on iOS
                 </a>
             </div>
 
             <div class="hero-phone">
-                <!-- Replace with: <img src="images/hero-phone.png" alt="Pray Unlock app" class="phone-frame"> -->
-                <div class="phone-placeholder">
-                    <span class="phone-placeholder-icon">📱</span>
-                    <span class="phone-placeholder-text">Replace with hero-phone.png</span>
+                <!-- Replace with: <img src="images/hero-phone.png" alt="Pray Unlock app" style="width:100%;border-radius:40px;"> -->
+                <div class="phone-mockup">
+                    <div class="phone-mockup-content">
+                        <div class="phone-mockup-icon">🙏</div>
+                        <div class="phone-mockup-text">Pray to unlock your apps</div>
+                        <div class="phone-mockup-sub">Screenshot coming soon</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -448,47 +452,45 @@
     <section class="features" id="features">
         <div class="container">
             <div class="features-header">
-                <h2>How Pray Unlock works</h2>
+                <h2>Simple by design</h2>
             </div>
+            <p class="features-subtitle">Simple features designed to strengthen your faith daily</p>
 
             <div class="features-grid">
                 <!-- Card 1 -->
                 <div class="feature-card">
-                    <div class="feature-card-phone">
-                        <!-- Replace with: <img src="images/phone-blocking.png" alt="App blocking settings"> -->
-                        <div class="phone-placeholder">
-                            <span class="phone-placeholder-icon">🚫</span>
-                            <span class="phone-placeholder-text">phone-blocking.png</span>
-                        </div>
+                    <div class="feature-card-image">
+                        <!-- Replace with: <img src="images/feature-blocking.png" alt="App blocking"> -->
+                        <span class="feature-card-placeholder">🚫</span>
                     </div>
-                    <h3>Block any app</h3>
-                    <p>Choose which apps distract you most. Block Instagram, TikTok, games — anything you want.</p>
+                    <div class="feature-card-body">
+                        <h3>Block any app</h3>
+                        <p>Choose which apps distract you most. Block Instagram, TikTok, games — anything you want.</p>
+                    </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="feature-card">
-                    <div class="feature-card-phone">
-                        <!-- Replace with: <img src="images/phone-prayer.png" alt="Prayer screen"> -->
-                        <div class="phone-placeholder">
-                            <span class="phone-placeholder-icon">🙏</span>
-                            <span class="phone-placeholder-text">phone-prayer.png</span>
-                        </div>
+                    <div class="feature-card-image">
+                        <!-- Replace with: <img src="images/feature-prayer.png" alt="Prayer screen"> -->
+                        <span class="feature-card-placeholder">📖</span>
                     </div>
-                    <h3>Pray in under a minute</h3>
-                    <p>When you try to open a blocked app, a short scripture-based prayer unlocks it.</p>
+                    <div class="feature-card-body">
+                        <h3>Scripture-based prayer</h3>
+                        <p>When you open a blocked app, a short scripture-based prayer appears. Pray to unlock it.</p>
+                    </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="feature-card">
-                    <div class="feature-card-phone">
-                        <!-- Replace with: <img src="images/phone-streak.png" alt="Prayer streak"> -->
-                        <div class="phone-placeholder">
-                            <span class="phone-placeholder-icon">🔥</span>
-                            <span class="phone-placeholder-text">phone-streak.png</span>
-                        </div>
+                    <div class="feature-card-image">
+                        <!-- Replace with: <img src="images/feature-streak.png" alt="Prayer streak"> -->
+                        <span class="feature-card-placeholder">🔥</span>
                     </div>
-                    <h3>Watch your faith grow</h3>
-                    <p>Track your prayer streak, see your history, and build a habit that brings you closer to God.</p>
+                    <div class="feature-card-body">
+                        <h3>Watch your faith grow</h3>
+                        <p>Track your prayer streak, see your history, and build a habit that brings you closer to God.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -497,11 +499,17 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <span class="footer-copy">&copy; 2026 Prayinglock. All rights reserved.</span>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms &amp; Conditions</a>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-brand-name">Pray Unlock</span>
+                    <span class="footer-brand-tagline">Your daily prayer companion</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
             </div>
+            <p class="footer-copy">&copy; 2026 Pray Unlock. All rights reserved.</p>
         </div>
     </footer>
 
