@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="60">
+  <rect width="180" height="60" rx="12" fill="#000"/>
+  <g>
+    <!-- Play triangle (simplified) -->
+    <path d="M27 16l12 14-12 14V16z" fill="#00D2FF"/>
+    <path d="M27 16l12 14L27 16z" fill="#00F076" opacity="0.8"/>
+    <path d="M39 30l-12 14V16l12 14z" fill="none"/>
+    <path d="M27 16l3.5 4L27 44l3.5-4L39 30 30.5 20 27 16z" fill="url(#playGrad)" opacity="0.3"/>
+    <!-- Simplified play icon -->
+    <polygon points="29,20 29,40 41,30" fill="#fff" opacity="0.9"/>
+    <!-- Text -->
+    <text x="52" y="22" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="400" fill="#fff" letter-spacing="0.5" text-transform="uppercase">GET IT ON</text>
+    <text x="52" y="40" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#fff" letter-spacing="0.2">Google Play</text>
+  </g>
+</svg>
