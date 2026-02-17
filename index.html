@@ -133,17 +133,22 @@
             flex-wrap: wrap;
         }
 
-        .hero-cta {
+        .hero-cta, .hero-cta-android {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            background: #D4893A;
             color: #fff;
             padding: 16px 32px;
             border-radius: 14px;
             font-weight: 700;
             font-size: 1rem;
+            min-width: 220px;
             transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .hero-cta {
+            background: #D4893A;
         }
 
         .hero-cta:hover {
@@ -152,16 +157,7 @@
         }
 
         .hero-cta-android {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
             background: #1a1a1a;
-            color: #fff;
-            padding: 16px 32px;
-            border-radius: 14px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: background 0.2s ease, transform 0.2s ease;
         }
 
         .hero-cta-android:hover {
@@ -542,8 +538,8 @@
                     <span class="footer-brand-tagline">Your daily prayer companion</span>
                 </div>
                 <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
                 </div>
             </div>
             <p class="footer-copy">&copy; 2026 Pray Unlock. All rights reserved.</p>
